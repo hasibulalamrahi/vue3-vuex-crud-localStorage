@@ -53,18 +53,40 @@
 </template>
 
 <script>
-import STORAGE_KEY_2 from './post'
+import STORAGE_KEY_2 from '../../views/post'
 export default {
-    props:[
-        'dynamicTitle',
-        'addButton',
-        'editButton',
-        'categories',
-        'editId'
+    // props:[
+    //     'dynamicTitle',
+    //     'addButton',
+    //     'editButton',
+    //     'categories',
+    //     'editId'
         
         
         
-    ],
+    // ],
+    props:{
+        dynamicTitle:{
+            type:String,
+            required:true,
+        },
+        addButton:{
+            type:Boolean,
+            required:true,
+        },
+        editButton:{
+            type:Boolean,
+            required:true,
+        },
+        categories:{
+            type:String,
+            required:true,
+        },
+        editId:{
+            type:Number,
+            required:true,
+        }
+    },
         emits:['close-modal'],
     data(){
         return{

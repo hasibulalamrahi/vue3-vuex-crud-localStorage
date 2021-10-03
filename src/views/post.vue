@@ -68,9 +68,9 @@
 </template>
 
 <script>
-  const STORAGE_KEY_2 = 'vue-posts';
-import postModal from './postModal'
-import viewPostModal from './viewPostModal'
+const STORAGE_KEY_2 = 'vue-posts';
+import postModal from '../components/posts/postModal'
+import viewPostModal from '../components/posts/viewPostModal'
 export default{
     name:'home',
      components:{

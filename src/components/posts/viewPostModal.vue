@@ -29,11 +29,25 @@
 export default{
 
         name:'componentM',
-        props:[
-            'expTitle',
-            'expCategory',
-            'expPost'
-        ],
+        // props:[
+        //     'expTitle',
+        //     'expCategory',
+        //     'expPost'
+        // ],
+        props:{
+            expTitle:{
+                type:String,
+                required:true,
+            },
+            expCategory:{
+                type:String,
+                required:true,
+            },
+            expPost:{
+                type:String,
+                required:true,
+            }
+        },
         data(){
             return{
                 myModal:false,

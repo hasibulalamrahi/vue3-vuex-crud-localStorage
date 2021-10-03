@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Categories from '../components/category/categories'
-import Post from '../components/posts/post'
+import Categories from '../views/categories'
+import Post from '../views/post'
 const routes = [
   {
     path: '/',

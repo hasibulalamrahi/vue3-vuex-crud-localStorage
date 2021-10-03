@@ -51,8 +51,9 @@
 </template>
 
 <script>
-  const STORAGE_KEY_1 = 'vue-categories';
-import ModalWindow from './categoryModal';
+// export const STORAGE_KEY_1 = 'vue-categories';
+import ModalWindow from '../components/category/categoryModal';
+const STORAGE_KEY_1 = 'vue-categories';
 // import STORAGE_KEY from '../store/store'
 export default{
     name:'category',

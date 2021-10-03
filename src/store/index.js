@@ -1,4 +1,8 @@
 import { createStore } from 'vuex'
+// import STORAGE_KEY_1 from '../views/categories'
+// import STORAGE_KEY_2 from '../views/post'
+let STORAGE_KEY_1 = 'vue-categories';
+let STORAGE_KEY_2 = 'vue-posts';
 
 
 export default createStore({
@@ -6,6 +10,11 @@ export default createStore({
     categories:[],
     posts:[]
   },
+//   created(){
+//         // this.state.categories = JSON.parse(localStorage.getItem(STORAGE_KEY_1)|| '[]');
+//         this.state.categories = JSON.parse(localStorage.getItem(STORAGE_KEY_1));
+
+//     },
   getters:{
     categories(state){
       return state.categories
@@ -15,15 +24,17 @@ export default createStore({
   }
 
   },
+
   mutations: {
 
-    addComponent(state,categories){
+    addComponent(state,categorie){
       state.categories.push({
-          id:categories.id,
-          name:categories.name
+          id:categorie.id,
+          name:categorie.name
       })
-      // console.log(state.categories)
-      localStorage.setItem(STORAGE_KEY_1,JSON.stringify(state.categories));
+    //   console.log(state.categories)
+    localStorage.setItem(STORAGE_KEY_1,JSON.stringify(state.categories));
+    //  this.addItem(state.categorie)
 
   },
   removeCategory(state,index){
@@ -69,5 +80,12 @@ export default createStore({
   actions: {
   },
   modules: {
-  }
+  },
+//   addItem(categorie){
+//       let data = JSON.parse(localStorage.getItem('all-categories'))
+//       if(!data){
+//           data=[]
+//       }
+//       localStorage.setItem('data',JSON.stringify(data))
+//   }
 })

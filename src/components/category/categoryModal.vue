@@ -43,16 +43,35 @@
 </template>
 
 <script>
-import STORAGE_KEY_1 from './categories.vue'
+// import STORAGE_KEY_1 from '../../views/categories.vue'
 export default{
-    props:[
-        'dynamicTitle',
-        'addButton',
-        'editButton',
-        'editIndex',
+    // props:[
+    //     'dynamicTitle',
+    //     'addButton',
+    //     'editButton',
+    //     'editIndex',
         
         
-    ],
+    // ],
+    props:{
+        dynamicTitle:{
+            type:String,
+            required:true,
+        },
+        addButton:{
+            type:Boolean,
+            required:true,
+        },
+        editButton:{
+            type:Boolean,
+            required:true,
+        },
+        editIndex:{
+            type:Number,
+            required:true,
+        }
+    },
+
     emits:['close-modal'],
     data(){
         return{
@@ -76,7 +95,7 @@ export default{
                 
                 this.addCategory=''
                 this.closeModal()
-                localStorage.setItem(STORAGE_KEY_1,JSON.stringify(this.$store.state.categories));
+                // localStorage.setItem(STORAGE_KEY_1,JSON.stringify(this.$store.state.categories));
                 // // console.log(this.$store.state.categories)
             }
         },
@@ -95,7 +114,7 @@ export default{
                 
                 this.addCategory =''
                 this.closeModal()
-                localStorage.setItem(STORAGE_KEY_1,JSON.stringify(this.$store.state.categories));
+                // localStorage.setItem(STORAGE_KEY_1,JSON.stringify(this.$store.state.categories));
             }
         }
     }
